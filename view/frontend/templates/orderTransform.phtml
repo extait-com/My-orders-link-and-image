@@ -1,0 +1,31 @@
+<?php
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_Link
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Extait\Link\Block\OrderTransform $block */
+?>
+
+<?php if ($block->isModuleEnabled() === true): ?>
+    <script>
+        require([
+            'jquery',
+            'Extait_Link/js/order-transform'
+        ], function ($) {
+            var jsonConfig = <?= /* @escapeNotVerified */ $block->getJsonConfig(); ?>;
+
+            $('table.table-order-items').orderTransform({
+                jsonConfig: jsonConfig
+            });
+        });
+    </script>
+<?php endif; ?>

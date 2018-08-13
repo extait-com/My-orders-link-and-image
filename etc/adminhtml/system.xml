@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the commercial license
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * @category Extait
+ * @package Extait_Link
+ * @copyright Copyright (c) 2016-2018 Extait, Inc. (http://www.extait.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="extait" translate="label" sortOrder="550">
+            <label>Extait Modules</label>
+        </tab>
+        <section id="extait_link" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+            <resource>Extait_Link::config</resource><!-- ACL -->
+            <class>separator-top</class>
+            <label>My Orders Product Link &amp; Image</label>
+            <tab>extait</tab>
+
+            <group id="general" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>General Settings</label>
+
+                <field id="module_enabled" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable</label>
+                    <comment>Activate or deactivate the module "My Orders Product Link &amp; Image"</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="items_ordered_tab" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Items Ordered Tab</label>
+
+                <field id="display_link" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display a link</label>
+                    <comment>Select "Yes" to display a product link in the tab "Items ordered" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="display_image" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display an image</label>
+                    <comment>Select "Yes" to display a product image in the tab "Items ordered" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="invoices_tab" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Invoices Tab</label>
+
+                <field id="display_link" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display a link</label>
+                    <comment>Select "Yes" to display a product link in the tab "Invoices" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="display_image" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display an image</label>
+                    <comment>Select "Yes" to display a product image in the tab "Invoices" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="order_shipment_tab" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Order Shipment Tab</label>
+
+                <field id="display_link" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display a link</label>
+                    <comment>Select "Yes" to display a product link in the tab "Order Shipment" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="display_image" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display an image</label>
+                    <comment>Select "Yes" to display a product image in the tab "Order Shipment" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="refunds_tab" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Refunds Tab</label>
+
+                <field id="display_link" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display a link</label>
+                    <comment>Select "Yes" to display a product link in the tab "Refunds" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="display_image" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display an image</label>
+                    <comment>Select "Yes" to display a product image in the tab "Refunds" in an order view</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
